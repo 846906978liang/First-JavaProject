@@ -4,7 +4,6 @@ import java.util.List;
 
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.JDialog;
-import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 
 import com.itheima.gjp.domain.Ledger;
@@ -51,7 +50,7 @@ public class EditLedgerController extends AbstractOperationLedgerDialog {
 			// 获取到一个List.toArray()集合,集合中的数据,填充到下拉菜单中
 			List<Object> list = sortService.querySortNameByParent(parent);
 			list.add(0, "-请选择-");
-			sortBox.setModel(new DefaultComboBoxModel(list.toArray()));
+			sortBox.setModel(new DefaultComboBoxModel<Object>(list.toArray()));
 		}
 	}
 	/*
